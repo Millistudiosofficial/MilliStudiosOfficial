@@ -84,40 +84,38 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
             />
             <span className="nav__logo-text">MilliStudios</span>
           </a>
-          
-          <ul className="nav__pill nav__pill--desktop">
-            {NAV_LINKS.map(l => (
-              <li key={l.id}>
-                <a
-                  href={`#${l.id}`}
-                  className={`nav__link ${activeTab === l.id ? "nav__link--active" : ""}`}
-                  onClick={(e) => handleTabClick(e, l.id)}
-                >
-                  {l.label}
-                </a>
-              </li>
-            ))}
-            <li><CinemaMode /></li>
-          </ul>
-
-          <ul className="nav__pill nav__pill--mobile">
-            {NAV_LINKS.map(l => (
-              <li key={l.id}>
-                <a
-                  href={`#${l.id}`}
-                  className={`nav__link-compact ${activeTab === l.id ? "nav__link-compact--active" : ""}`}
-                  onClick={(e) => handleTabClick(e, l.id)}
-                  aria-label={l.label}
-                >
-                  {getMobileContent(l)}
-                </a>
-              </li>
-            ))}
-            <li>
-              <CinemaMode iconOnly />
-            </li>
-          </ul>
         </div>
+        
+        <ul className="nav__pill nav__pill--desktop">
+          {NAV_LINKS.map(l => (
+            <li key={l.id}>
+              <a
+                href={`#${l.id}`}
+                className={`nav__link ${activeTab === l.id ? "nav__link--active" : ""}`}
+                onClick={(e) => handleTabClick(e, l.id)}
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <ul className="nav__pill nav__pill--mobile">
+          {NAV_LINKS.map(l => (
+            <li key={l.id}>
+              <a
+                href={`#${l.id}`}
+                className={`nav__link-compact ${activeTab === l.id ? "nav__link-compact--active" : ""}`}
+                onClick={(e) => handleTabClick(e, l.id)}
+                aria-label={l.label}
+              >
+                {getMobileContent(l)}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <CinemaMode />
       </div>
     </nav>
   );

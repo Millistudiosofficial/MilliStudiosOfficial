@@ -16,10 +16,7 @@ export default function LensCursor() {
   }, []);
   return (
     <div ref={ref} className={`lens-cursor${large?" large":""}`} aria-hidden="true">
-      <div className="lens-cursor__ring" />
-      <div className="lens-cursor__h" />
-      <div className="lens-cursor__v" />
-      <div className="lens-cursor__dot" />
+      <img src="/clapper-cursor.png" alt="Cursor" />
     </div>
   );
 }

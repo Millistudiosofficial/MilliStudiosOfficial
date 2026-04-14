@@ -14,6 +14,7 @@ import ClientNexus from "@/components/ClientNexus";
 import Footer from "@/components/Footer";
 import AdminFAB from "@/components/AdminFAB";
 import PromoTab from "@/components/PromoTab";
+import BrandSeal from "@/components/BrandSeal";
 const LogoIntro = dynamic(() => import("@/components/LogoIntro"), { ssr: false });
 
 // Dynamic imports for canvas/cursor (client-only)
@@ -49,7 +50,7 @@ export default function Home() {
       </main>
       <Footer />
       {activeTab === "home" && <PromoTab setActiveTab={setActiveTab} />}
-      
+      {activeTab === "home" && <BrandSeal />}
       <AdminFAB />
     </div>
   );

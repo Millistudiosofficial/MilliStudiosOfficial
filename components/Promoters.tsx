@@ -4,8 +4,9 @@ import { useAdmin } from "@/context/AdminContext";
 export default function Promoters() {
   const { managedPromoters, managedConfig } = useAdmin();
   return (
-    <section className="section promoters" id="promoters" aria-labelledby="promoters-title">
-      <div className="section__inner">
+    <section className="section promoters relative overflow-hidden" id="promoters" aria-labelledby="promoters-title">
+      <div className="hero__grid opacity-20" aria-hidden="true" />
+      <div className="section__inner relative z-10">
         <div className="reveal" style={{ textAlign: "center" }}>
           <p className="section__tag" style={{ justifyContent: "center" }}>{managedConfig.promotersTag}</p>
           <h2 className="section__title" id="promoters-title" style={{ textAlign: "center" }}>
@@ -52,6 +53,9 @@ export default function Promoters() {
                 </div>
                 {/* BACK */}
                 <div className="team-card__back" style={{ ["--avatar-glow" as string]: `${member.accentColor}4d` }}>
+                  <div className="core-id-flicker" style={{position:"absolute",top:"12px",right:"16px"}} aria-hidden="true">
+                    PRM_UNIT: {Math.random().toString(16).slice(2, 6).toUpperCase()}
+                  </div>
                   <p className="team-card__back-title">Outreach Credits</p>
                   <p className="team-card__bio">{member.bio}</p>
                   <ul className="team-card__credits">

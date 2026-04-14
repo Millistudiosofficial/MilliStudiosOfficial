@@ -19,14 +19,15 @@ export default function StudioVault() {
   const onTouchMove = (e: React.TouchEvent) => calcPct(e.touches[0].clientX);
 
   return (
-    <section className="section vault" id="vault" aria-labelledby="vault-title">
-      <div className="section__inner">
-        <div className="reveal" style={{ textAlign: "center" }}>
-          <p className="section__tag" style={{ justifyContent: "center" }}>{managedConfig.vaultTag}</p>
-          <h2 className="section__title" id="vault-title" style={{ textAlign: "center", whiteSpace: "pre-line" }}>
+    <section className="section vault relative overflow-hidden" id="vault" aria-labelledby="vault-title">
+      <div className="hero__grid opacity-20" aria-hidden="true" />
+      <div className="section__inner relative z-10">
+        <div className="reveal">
+          <p className="section__tag">{managedConfig.vaultTag}</p>
+          <h2 className="section__title" id="vault-title" style={{ whiteSpace: "pre-line" }}>
             {managedConfig.vaultTitle}
           </h2>
-          <p className="section__desc" style={{ margin: "0 auto", textAlign: "center" }}>
+          <p className="section__desc">
             {managedConfig.vaultDesc}
           </p>
         </div>
@@ -64,7 +65,7 @@ export default function StudioVault() {
               width={700} 
               height={394} 
               className="slider-layer"
-              style={{filter:"grayscale(0.7) contrast(0.85) brightness(1.05)"}}
+              style={{filter:"grayscale(0.7) contrast(0.85) brightness(1.05)", width: "100%", height: "auto"}}
             />
             {/* FINAL layer (top — clipped) */}
             <div className="slider-top" style={{width:`${pct}%`}}>
@@ -73,7 +74,7 @@ export default function StudioVault() {
                 alt="Final Grade" 
                 width={700} 
                 height={394}
-                style={{filter:"contrast(1.08) saturate(1.3)",width:"700px",height:"100%",objectFit:"cover"}}
+                style={{filter:"contrast(1.08) saturate(1.3)",width:"100%",height:"auto",objectFit:"cover"}}
               />
             </div>
             {/* Badges */}

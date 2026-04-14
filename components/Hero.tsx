@@ -21,19 +21,25 @@ export default function Hero({ setActiveTab }: HeroProps) {
     const handleMouseMove = (e: MouseEvent) => {
       if (!contentRef.current) return;
       const { innerWidth, innerHeight } = window;
-      const x = (e.clientX / innerWidth - 0.5) * 20;
-      const y = (e.clientY / innerHeight - 0.5) * 20;
+      const x = (e.clientX / innerWidth - 0.5) * 30; // Increased range
+      const y = (e.clientY / innerHeight - 0.5) * 30;
+
+      // Parallax for headline
+      const headline = contentRef.current.querySelector<HTMLElement>(".hero__headline");
+      if (headline) {
+        headline.style.transform = `translate3d(${x * 0.4}px, ${y * 0.4}px, 0)`;
+      }
 
       const floats = document.querySelectorAll<HTMLElement>(".hero__float-icon");
       floats.forEach((el, i) => {
-        const depth = (i + 1) * 0.5;
+        const depth = (i + 1) * 0.8;
         el.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
       });
 
       const orbs = document.querySelectorAll<HTMLElement>(".bokeh-orb");
       orbs.forEach((el, i) => {
-        const depth = (i + 1) * 0.15;
-        el.style.transform += ` translate(${x * depth}px, ${y * depth}px)`;
+        const depth = (i + 1) * 0.2;
+        el.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
       });
     };
 
@@ -56,21 +62,21 @@ export default function Hero({ setActiveTab }: HeroProps) {
 
       {/* Floating decorative icons */}
       <div className="hero__float-icon hero__float-icon--1" aria-hidden="true">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(0,234,255,0.6)" strokeWidth="1.5">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(0,234,255,0.6)" strokeWidth="1.5">
           <path d="M23 7l-7 5 7 5V7z"/>
           <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
         </svg>
       </div>
       <div className="hero__float-icon hero__float-icon--2" aria-hidden="true">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(0,234,255,0.5)" strokeWidth="1.5">
-          <circle cx="12" cy="12" r="3"/>
-          <path d="M20.188 10.938C20.725 10.389 21 9.706 21 9c0-1.657-1.343-3-3-3h-.5L16 4H8L6.5 6H6C4.343 6 3 7.343 3 9c0 .706.275 1.389.812 1.938C2.696 11.541 2 12.689 2 14c0 2.21 1.79 4 4 4h12c2.21 0 4-1.79 4-4 0-1.311-.696-2.459-1.812-3.062z"/>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(0,234,255,0.5)" strokeWidth="1.5">
+          <path d="M23 7l-7 5 7 5V7z"/>
+          <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
         </svg>
       </div>
       <div className="hero__float-icon hero__float-icon--3" aria-hidden="true">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(0,234,255,0.4)" strokeWidth="1.5">
-          <polygon points="23 7 16 12 23 17 23 7"/>
-          <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(0,234,255,0.5)" strokeWidth="1.5">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M20.188 10.938C20.725 10.389 21 9.706 21 9c0-1.657-1.343-3-3-3h-.5L16 4H8L6.5 6H6C4.343 6 3 7.343 3 9c0 .706.275 1.389.812 1.938C2.696 11.541 2 12.689 2 14c0 2.21 1.79 4 4 4h12c2.21 0 4-1.79 4-4 0-1.311-.696-2.459-1.812-3.062z"/>
         </svg>
       </div>
 

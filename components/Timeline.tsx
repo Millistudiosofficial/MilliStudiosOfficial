@@ -15,18 +15,19 @@ export default function Timeline() {
   }, [managedTimeline]);
 
   return (
-    <section className="section timeline-section" id="timeline" aria-labelledby="timeline-title">
-      <div className="section__inner">
-        <div className="reveal" style={{textAlign:"center"}}>
-          <p className="section__tag" style={{justifyContent:"center"}}>{managedConfig.timelineTag}</p>
-          <h2 className="section__title" id="timeline-title" style={{textAlign:"center", whiteSpace: "pre-line"}}>
+    <section className="section timeline-section relative overflow-hidden" id="timeline" aria-labelledby="timeline-title">
+      <div className="hero__grid opacity-20" aria-hidden="true" />
+      <div className="section__inner relative z-10">
+        <div className="reveal">
+          <p className="section__tag">{managedConfig.timelineTag}</p>
+          <h2 className="section__title" id="timeline-title" style={{ whiteSpace: "pre-line" }}>
             {managedConfig.timelineTitle}
           </h2>
-          <p className="section__desc" style={{margin:"0 auto",textAlign:"center"}}>
+          <p className="section__desc">
             {managedConfig.timelineDesc}
           </p>
         </div>
-        <div className="timeline" style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "0 auto", maxWidth: "900px" }}>
+        <div className="timeline">
           {managedTimeline.map((item, i) => (
             <div key={i} className="timeline-item" ref={el => { itemRefs.current[i]=el; }} style={{ width: "100%", maxWidth: "800px" }}>
               <div className="timeline-item__dot">{item.icon}</div>
