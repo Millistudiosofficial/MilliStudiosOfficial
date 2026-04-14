@@ -381,11 +381,11 @@ input,textarea,select{font-family:inherit}
    HERO
    =================================================================== */
 .hero{
-  position:relative;height:100%;
+  position:relative;min-height:100vh;
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;z-index:1;
-  padding-top:calc(var(--nav-height) + 60px);
-  padding-bottom: 120px; 
+  padding-top:var(--nav-height);
+  padding-bottom:100px; 
 }
 @media (max-width: 768px) {
   .hero {
@@ -413,7 +413,7 @@ input,textarea,select{font-family:inherit}
   box-shadow:inset 0 1px 0 rgba(255,255,255,0.25),0 4px 16px rgba(0,0,0,0.3);
   font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
   color:var(--cyan);
-  margin-top: 20px; 
+  margin-top: 0; 
   margin-bottom:24px;
   animation:fadeSlideUp .8s ease forwards;
 }
