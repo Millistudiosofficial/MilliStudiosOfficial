@@ -2,15 +2,26 @@
 import { useState } from "react";
 import { useAdmin } from "@/context/AdminContext";
 
-export default function CinemaMode() {
+export default function CinemaMode({ iconOnly = false }: { iconOnly?: boolean }) {
   const { managedConfig } = useAdmin();
   const [active, setActive] = useState(false);
   const toggle = () => setActive(v => !v);
   return (
     <>
-      <button className="cinema-toggle" id="cinema-toggle" onClick={toggle} aria-label="Toggle cinematography mode">
-        <span className={`cinema-toggle__dot${active?" cinema-toggle__dot--active":""}`} />
-        {active ? "Exit Cinema" : "Cinema Mode"}
+      <button 
+        className={iconOnly ? "nav__link-compact" : "cinema-toggle"} 
+        id="cinema-toggle" 
+        onClick={toggle} 
+        aria-label="Toggle cinematography mode"
+      >
+        <span className={iconOnly ? `nav-dot ${active ? "opacity-1" : "opacity-40"}` : `cinema-toggle__dot${active ? " cinema-toggle__dot--active" : ""}`} />
+        {!iconOnly && (active ? "Exit Cinema" : "Cinema Mode")}
+        {iconOnly && (
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"></polygon>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+          </svg>
+        )}
       </button>
       <div className={`cinema-overlay${active?" active":""}`} id="cinema-overlay">
         {/* Background Video for Cinema Mode */}
