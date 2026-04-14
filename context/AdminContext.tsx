@@ -86,7 +86,7 @@ export const AdminProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     contactEmail: "admin@millistudios.com",
     contactPhone: "+91 916421424",
     contactLocation: "KL University, IN",
-    cinemaVideo: "/bg-video.mp4",
+    cinemaVideo: "https://assets.mixkit.co/videos/preview/mixkit-cinematic-shot-of-a-filmmaker-on-set-42657-large.mp4",
     socialYoutube: "https://www.youtube.com/channel/UCy9_-gmTKe72GJCeBWrCF-A",
     socialInstagram: "https://www.instagram.com/millistudiosofficial/",
     socialLinkedIn: "#",

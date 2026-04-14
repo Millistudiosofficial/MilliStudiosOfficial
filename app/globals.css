@@ -373,11 +373,11 @@ input,textarea,select{font-family:inherit}
   position:relative;height:100%;
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;z-index:1;
-  padding-top:calc(var(--nav-height) + 60px);
+  padding-top:calc(var(--nav-height) + 140px); /* Clear the desktop navbar pill */
 }
 @media (max-width: 768px) {
   .hero {
-    padding-top: calc(var(--nav-height) + 120px);
+    padding-top: calc(var(--nav-height) + 60px) !important; /* Minimal spacing needed at top */
   }
 }
 .hero__grid{
