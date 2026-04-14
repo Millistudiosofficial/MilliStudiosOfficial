@@ -123,7 +123,7 @@ export const team = [
 export const projects = [
   {
     id: "oo-katha",
-    title: "Ok katha",
+    title: "Oo Katha",
     subtitle: "A Story",
     category: "Films",
     year: "10th Apr 2026",
@@ -137,7 +137,7 @@ export const projects = [
   },
   {
     id: "nija-chitram",
-    title: "Nijam chirta",
+    title: "Nija Chitram",
     subtitle: "The Real Face",
     category: "Films",
     year: "6th Apr 2026",

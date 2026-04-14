@@ -98,10 +98,10 @@ export const AdminProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     heroCtaPrimary: "Explore Films",
     heroCtaSecondary: "Collaborate",
     // Default Philosophy Content
-    philosophyTag: "Summary of MilliStudiosOfficial",
-    philosophyTitle: "Creative Production House",
-    philosophyQuote: "Milli Studios is a creative production house specializing in high-quality short films and cinematic cover songs & Own Albums.",
-    philosophyBody1: "Milli Studios is a creative production house specializing in high-quality short films and cinematic cover songs. We are dedicated to bringing unique stories to life through visually stunning and engaging digital content.",
+    philosophyTag: "The Vision",
+    philosophyTitle: "Beyond The Lens",
+    philosophyQuote: "MilliStudios is a premium creative production house specializing in high-fidelity short films and cinematic sonic experiences.",
+    philosophyBody1: "MilliStudios is an elite creative collective specializing in high-quality short films and cinematic soundscapes. We are dedicated to bringing unique stories to life through visually stunning and emotionally resonant digital content.",
     philosophyBody2: "Driven by a passion for collaboration, we bridge the gap between professional production and emerging talent. We provide a dedicated platform for filmmakers, singers, actors, and editors to learn, grow, and showcase their skills alongside a supportive community.",
     philosophyServices: "Visual Storytelling, Film Direction, Cinematography, Music Covers & Arrangements, Post-Production / Editing, Digital Media Creation",
     // Default Vault Comparison

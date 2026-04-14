@@ -267,7 +267,7 @@ export default function AdminPage() {
             <div className="flex items-center gap-4">
               <button 
                 onClick={logout}
-                className="bg-red-500/10 text-red-500 px-6 py-4 rounded-xl flex items-center gap-3 font-bold text-[10px] uppercase tracking-widest hover:bg-red-500 hover:text-white transition-all border border-red-500/20"
+                className="bg-red-500/20 text-red-500 px-6 py-4 rounded-xl flex items-center gap-3 font-bold text-[10px] uppercase tracking-widest hover:bg-red-500 hover:text-white transition-all border border-red-500/30"
               >
                 <Lock size={18} /> Lock Console
               </button>
