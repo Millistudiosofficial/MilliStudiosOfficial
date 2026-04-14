@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MilliStudios — Defying Creative Gravity",
+  title: "MilliStudiosOfficial",
   description:
     "MilliStudios is a cinematic production house and technology collective. Films, music, UI/UX design, and game development — all defying creative gravity.",
   keywords: [

@@ -34,7 +34,7 @@ export default function ClientNexus() {
             <span className="console-dot console-dot--r"/>
             <span className="console-dot console-dot--y"/>
             <span className="console-dot console-dot--g"/>
-            <span className="console-label">MILLISTUDIOS · CLIENT NEXUS v2.0</span>
+            <span className="console-label">MilliStudiosOfficial · CLIENT NEXUS v2.0</span>
           </div>
 
           <div className="nexus__body">

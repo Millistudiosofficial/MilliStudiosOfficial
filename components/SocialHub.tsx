@@ -47,7 +47,7 @@ export default function SocialHub() {
               <InstagramIcon />
             </div>
             <p className="social-card__platform">Instagram</p>
-            <h3 className="social-card__title">@MilliStudios</h3>
+            <h3 className="social-card__title">@MilliStudiosOfficial</h3>
             <p className="social-card__desc">
               Cinematic BTS shots, film stills, and raw behind-the-lens moments.
               Visual storytelling at its finest.
@@ -69,7 +69,7 @@ export default function SocialHub() {
               <YoutubeIcon />
             </div>
             <p className="social-card__platform">YouTube</p>
-            <h3 className="social-card__title">MilliStudios</h3>
+            <h3 className="social-card__title">MilliStudiosOfficial</h3>
             <p className="social-card__desc">
               Films, music videos, cinematography reels, and full productions.
               Watch the universe we&apos;ve built — frame by frame.

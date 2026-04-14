@@ -12,9 +12,9 @@ export default function AboutPhilosophy() {
   return (
     <section className="section philosophy" id="studio" aria-labelledby="philosophy-title">
       <div className="section__inner">
-        <div className="reveal" style={{textAlign:"center"}}>
-          <p className="section__tag" style={{justifyContent:"center"}}>{managedConfig.philosophyTag}</p>
-          <h2 className="section__title" id="philosophy-title" style={{textAlign:"center"}}>
+        <div className="reveal" style={{ textAlign: "center" }}>
+          <p className="section__tag" style={{ justifyContent: "center" }}>{managedConfig.philosophyTag}</p>
+          <h2 className="section__title" id="philosophy-title" style={{ textAlign: "center" }}>
             {managedConfig.philosophyTitle}
           </h2>
         </div>
@@ -28,7 +28,7 @@ export default function AboutPhilosophy() {
           <p className="philosophy__body">
             {managedConfig.philosophyBody2}
           </p>
-          <div className="philosophy__tags">
+          <div className="philosophy__tags" style={{ justifyContent: "center" }}>
             {services.map(t => (
               <span key={t} className="philosophy__tag">{t}</span>
             ))}

@@ -47,15 +47,15 @@ export default function ProjectMatrix() {
   return (
     <section className="section projects" id="projects" aria-labelledby="projects-title">
       <div className="section__inner">
-        <div className="reveal">
-          <p className="section__tag">Project Archive</p>
-          <h2 className="section__title" id="projects-title">
+        <div className="reveal" style={{ textAlign: "center" }}>
+          <p className="section__tag" style={{ justifyContent: "center" }}>Project Archive</p>
+          <h2 className="section__title" id="projects-title" style={{ textAlign: "center" }}>
             The Full<br/><span className="grad-text">Portfolio</span>
           </h2>
         </div>
 
-        <div className="projects__filters reveal reveal--delay-1">
-          <div className="filter-group">
+        <div className="projects__filters reveal reveal--delay-1" style={{ justifyContent: "center" }}>
+          <div className="filter-group" style={{ margin: "0 auto" }}>
             {CATEGORIES.map(cat => (
               <button 
                 key={cat} 
@@ -72,7 +72,7 @@ export default function ProjectMatrix() {
           </div>
 
           {active === "Songs" && (
-            <div className="filter-group sub-filters">
+            <div className="filter-group sub-filters" style={{ margin: "0 auto" }}>
               {SONG_SUBCATEGORIES.map(subCat => (
                 <button 
                   key={subCat} 

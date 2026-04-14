@@ -16,7 +16,7 @@ export default function AdminFAB() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="relative group flex items-center justify-center transition-all duration-300 cursor-none"
-          style={{ width: '2cm', height: '2cm' }}
+          style={{ width: '1cm', height: '1cm' }}
         >
           <div className="absolute inset-0 bg-cyan/5 opacity-0 group-hover:opacity-100 rounded-full blur-2xl transition-opacity" />
           
@@ -32,7 +32,7 @@ export default function AdminFAB() {
           <div className="absolute -inset-4 bg-cyan/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity animate-pulse pointer-events-none rounded-full" />
           
           {/* Hover Label */}
-          <div className="absolute right-[2.2cm] bg-obsidian/90 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-lg text-[9px] text-white uppercase tracking-widest font-bold opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-2xl">
+          <div className="absolute right-[1.2cm] bg-obsidian/90 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-lg text-[9px] text-white uppercase tracking-widest font-bold opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-2xl">
             Admin Console
           </div>
         </motion.div>

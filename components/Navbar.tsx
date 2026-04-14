@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
@@ -21,70 +21,101 @@ interface NavbarProps {
 
 export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  useEffect(()=>{
-    const fn = ()=>setScrolled(window.scrollY>40);
-    window.addEventListener("scroll",fn);
-    return ()=>window.removeEventListener("scroll",fn);
-  },[]);
+  
+  useEffect(() => {
+    const fn = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", fn);
+    return () => window.removeEventListener("scroll", fn);
+  }, []);
 
-  const handleTabClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const handleTabClick = (e: React.MouseEvent, id: string) => {
     e.preventDefault();
     setActiveTab(id);
-    setMobileOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      const navHeight = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  const getMobileContent = (link: typeof NAV_LINKS[0]) => {
+    switch (link.id) {
+      case "home": return <div className="nav-dot" />;
+      case "about": return "ME";
+      case "projects": return (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+      );
+      case "team": return "3A";
+      case "legacy": return (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="23 7 16 12 23 17 23 7"></polygon>
+          <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+        </svg>
+      );
+      case "contact": return (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      );
+      default: return "";
+    }
   };
 
   return (
-    <>
-      <nav className={`nav${scrolled?" scrolled":""}`} id="nav">
-        <div className="nav__inner">
+    <nav className={`nav ${scrolled ? "nav--scrolled" : ""}`} aria-label="Main Navigation">
+      <div className="nav__inner">
+        <div className="nav__brand">
           <a href="#" className="nav__logo" id="nav-logo" aria-label="MilliStudios" onClick={(e) => handleTabClick(e, "home")}>
-            <Image
-              src="/milli-logo.png"
+            <Image 
+              src="/milli-logo.png" 
+              width={32} 
+              height={32} 
               alt="MilliStudios Logo"
-              width={32}
-              height={32}
               style={{ flexShrink: 0 }}
             />
-            MilliStudios
+            <span className="nav__logo-text">MilliStudios</span>
           </a>
-          <ul className="nav__pill">
+          
+          <ul className="nav__pill nav__pill--desktop">
             {NAV_LINKS.map(l => (
-              <li key={`desktop-${l.id}`}>
-                <a 
-                  href={`#${l.id}`} 
-                  className={activeTab === l.id ? "active" : ""} 
+              <li key={l.id}>
+                <a
+                  href={`#${l.id}`}
+                  className={`nav__link ${activeTab === l.id ? "nav__link--active" : ""}`}
                   onClick={(e) => handleTabClick(e, l.id)}
                 >
                   {l.label}
                 </a>
               </li>
             ))}
+            <li><CinemaMode /></li>
           </ul>
-          <div className="nav__right">
-            <CinemaMode />
-            <button className="nav__hamburger" id="nav-hamburger" aria-label="Menu" onClick={()=>setMobileOpen(true)}>
-              <span/><span/><span/>
-            </button>
-          </div>
+
+          <ul className="nav__pill nav__pill--mobile">
+            {NAV_LINKS.map(l => (
+              <li key={l.id}>
+                <a
+                  href={`#${l.id}`}
+                  className={`nav__link-compact ${activeTab === l.id ? "nav__link-compact--active" : ""}`}
+                  onClick={(e) => handleTabClick(e, l.id)}
+                  aria-label={l.label}
+                >
+                  {getMobileContent(l)}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
-      </nav>
-      <div className={`mobile-nav${mobileOpen?" open":""}`} id="mobile-nav">
-        <button className="mobile-nav__close" onClick={()=>setMobileOpen(false)}>✕</button>
-        <ul className="mobile-nav__links">
-          {NAV_LINKS.map(l => (
-            <li key={`mobile-${l.id}`}>
-              <a 
-                href={`#${l.id}`} 
-                className={activeTab === l.id ? "active-mobile" : ""}
-                onClick={(e) => handleTabClick(e, l.id)}
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
       </div>
-    </>
+    </nav>
   );
 }

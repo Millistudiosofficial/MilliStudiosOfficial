@@ -21,12 +21,14 @@ export default function StudioVault() {
   return (
     <section className="section vault" id="vault" aria-labelledby="vault-title">
       <div className="section__inner">
-        <div className="reveal">
-          <p className="section__tag">{managedConfig.vaultTag}</p>
-          <h2 className="section__title" id="vault-title" style={{ whiteSpace: "pre-line" }}>
+        <div className="reveal" style={{ textAlign: "center" }}>
+          <p className="section__tag" style={{ justifyContent: "center" }}>{managedConfig.vaultTag}</p>
+          <h2 className="section__title" id="vault-title" style={{ textAlign: "center", whiteSpace: "pre-line" }}>
             {managedConfig.vaultTitle}
           </h2>
-          <p className="section__desc">{managedConfig.vaultDesc}</p>
+          <p className="section__desc" style={{ margin: "0 auto", textAlign: "center" }}>
+            {managedConfig.vaultDesc}
+          </p>
         </div>
 
         {/* Film strip */}

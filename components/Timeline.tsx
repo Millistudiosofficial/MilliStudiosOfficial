@@ -26,9 +26,9 @@ export default function Timeline() {
             {managedConfig.timelineDesc}
           </p>
         </div>
-        <div className="timeline">
+        <div className="timeline" style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "0 auto", maxWidth: "900px" }}>
           {managedTimeline.map((item, i) => (
-            <div key={i} className="timeline-item" ref={el => { itemRefs.current[i]=el; }}>
+            <div key={i} className="timeline-item" ref={el => { itemRefs.current[i]=el; }} style={{ width: "100%", maxWidth: "800px" }}>
               <div className="timeline-item__dot">{item.icon}</div>
               <p className="timeline-item__year">{item.year}</p>
               <h3 className="timeline-item__title">{item.title}</h3>

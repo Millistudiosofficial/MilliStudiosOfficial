@@ -27,7 +27,7 @@ export default function CinemaMode() {
         <div className="cinema-reel relative z-10">
           <div className="cinema-reel__film" />
           <div className="cinema-reel__text">
-            MILLISTUDIOS<br/>
+            MilliStudiosOfficial<br/>
             <span style={{fontSize:"1rem",fontWeight:400,opacity:.6,letterSpacing:"0.3em"}}>{managedConfig.studioMotto}</span>
           </div>
         </div>

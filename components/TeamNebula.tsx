@@ -6,12 +6,14 @@ export default function TeamNebula() {
   return (
     <section className="section team" id="team" aria-labelledby="team-title">
       <div className="section__inner">
-        <div className="reveal">
-          <p className="section__tag">{managedConfig.teamTag}</p>
-          <h2 className="section__title" id="team-title" style={{ whiteSpace: "pre-line" }}>
+        <div className="reveal" style={{ textAlign: "center" }}>
+          <p className="section__tag" style={{ justifyContent: "center" }}>{managedConfig.teamTag}</p>
+          <h2 className="section__title" id="team-title" style={{ textAlign: "center", whiteSpace: "pre-line" }}>
             {managedConfig.teamTitle}
           </h2>
-          <p className="section__desc">{managedConfig.teamDesc}</p>
+          <p className="section__desc" style={{ margin: "0 auto", textAlign: "center" }}>
+            {managedConfig.teamDesc}
+          </p>
         </div>
         <div className="team__grid">
           {managedTeam.map((member, i) => (

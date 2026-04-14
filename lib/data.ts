@@ -1,16 +1,16 @@
-// MilliStudios — Central Data Store
+// MilliStudiosOfficial — Central Data Store
 
 export const team = [
   {
     id: "venkat",
     name: "Venkat Perumalla",
     role: "Founder",
-    bio: "The driving visionary force. Venkat established MilliStudios with a relentless ambition to push creative boundaries and tell profound stories.",
+    bio: "The driving visionary force. Venkat established MilliStudiosOfficial with a relentless ambition to push creative boundaries and tell profound stories.",
     specialties: ["Directing", "Creative Vision", "Leadership"],
-    credits: ["Nija Chitram — Director", "MilliStudios — Founder"],
+    credits: ["Nija Chitram — Director", "MilliStudiosOfficial — Founder"],
     initials: "VP",
     accentColor: "#00eaff",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/trainwith__jay?igsh=dXNkODNxc2RzcWth",
     image: "/team-1.jpg"
   },
@@ -20,10 +20,10 @@ export const team = [
     role: "Co-founder",
     bio: "Architecting the foundation. Poorna works alongside Venkat to steer the structural and creative trajectory of the studio's portfolio.",
     specialties: ["Operations", "Strategy", "Creative Producing"],
-    credits: ["MilliStudios — Co-founder", "Brand Strategy — Lead"],
+    credits: ["MilliStudiosOfficial — Co-founder", "Brand Strategy — Lead"],
     initials: "PP",
     accentColor: "#b22cff",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/_poorna_penki_?igsh=MTBjbTA5NzJiZm5kdg==",
     image: "/team-2.png"
   },
@@ -33,10 +33,10 @@ export const team = [
     role: "CEO & Lead Cinematographer",
     bio: "The eye behind the lens and the operational lead. Subhani brings visual gravity to every frame while managing the studio's executive operations.",
     specialties: ["Cinematography", "Executive Leadership", "Color Grading"],
-    credits: ["Nija Chitram — DOP", "Parichayamilla — Cinematography", "MilliStudios — CEO"],
+    credits: ["Nija Chitram — DOP", "Parichayamilla — Cinematography", "MilliStudiosOfficial — CEO"],
     initials: "SB",
     accentColor: "#a78bfa",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/__.bablu.__shaik?igsh=dW5odDNlczl6c3Zu",
     image: "/team-3.jpg"
   },
@@ -46,10 +46,10 @@ export const team = [
     role: "Project Manager",
     bio: "The core engine of production. Surya orchestrates the chaos of filmmaking into streamlined schedules and zero-delay execution.",
     specialties: ["Project Management", "Resource Planning", "Scheduling"],
-    credits: ["Shortfilm Pipeline — Manager", "MilliStudios — Core Team"],
+    credits: ["Shortfilm Pipeline — Manager", "MilliStudiosOfficial — Core Team"],
     initials: "ST",
     accentColor: "#ffcc00",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/saisuryatej97?igsh=MWdydmNzczJ3Y3J2MQ==",
     image: "/team-4.jpg"
   },
@@ -62,7 +62,7 @@ export const team = [
     credits: ["Oo Katha — Director", "Oo Priyathama — Visuals"],
     initials: "AP",
     accentColor: "#00ff73",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/_akhil__1?igsh=MzB2bzc1aGJhbHlh",
     image: "/team-5.jpg"
   },
@@ -75,7 +75,7 @@ export const team = [
     credits: ["Location Logistics — Head", "Set Coordination"],
     initials: "KA",
     accentColor: "#ff2a2a",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/_koushal__4633?igsh=N25rYW41N3NiN2Z0",
     image: "/team-6.jpg"
   },
@@ -88,7 +88,7 @@ export const team = [
     credits: ["Pre-Production Ops", "Crew Management"],
     initials: "DJ",
     accentColor: "#ff8c00",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/dineshjonnalagadda?igsh=MjVwNjdwYml1ZXpo",
     image: "/team-7.jpg"
   },
@@ -98,10 +98,10 @@ export const team = [
     role: "Designer",
     bio: "Crafting the visual identity. Arshad molds the branding, typography, and promotional aesthetics into a cohesive, aggressive Antigravity style.",
     specialties: ["UI/UX Design", "Graphic Design", "Brand Identity"],
-    credits: ["MilliStudios Branding", "Posters & VFX Graphics"],
+    credits: ["MilliStudiosOfficial Branding", "Posters & VFX Graphics"],
     initials: "AS",
     accentColor: "#ff00ae",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/arshadux?igsh=eHl6bWVxaWVzZjU0",
     image: "/team-8.jpg"
   },
@@ -109,12 +109,12 @@ export const team = [
     id: "dany",
     name: "Dany Orton",
     role: "Music Department",
-    bio: "Architect of sound. Dany's original compositions breathe emotional life into every MilliStudios production, fusing classical sensibility with cinematic scoring.",
+    bio: "Architect of sound. Dany's original compositions breathe emotional life into every MilliStudiosOfficial production, fusing classical sensibility with cinematic scoring.",
     specialties: ["Composition", "Sound Design", "Audio Engineering"],
     credits: ["Oo Priyathama — Original Score", "Nee Gunde Lona — Production"],
     initials: "DO",
     accentColor: "#f9a8d4",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/jevadanreynolds?igsh=ZDFyZ2ViYXZycDhp",
     image: "/team-9.jpg"
   }
@@ -226,8 +226,8 @@ export const timeline = [
   },
   {
     year: "2022",
-    title: "MilliStudios Founded",
-    desc: "Venkat Perumalla establishes MilliStudios with a vision to defy creative gravity, bringing together a elite team of artists and technicians.",
+    title: "MilliStudiosOfficial Founded",
+    desc: "Venkat Perumalla establishes MilliStudiosOfficial with a vision to defy creative gravity, bringing together a elite team of artists and technicians.",
     icon: "✦",
   },
   {
@@ -239,7 +239,7 @@ export const timeline = [
   {
     year: "2023",
     title: "Oo Priyathama",
-    desc: "Original music composition by Dany with visual direction by Akhil. MilliStudios' first musical feature.",
+    desc: "Original music composition by Dany with visual direction by Akhil. MilliStudiosOfficial' first musical feature.",
     icon: "🎵",
   },
   {
@@ -263,10 +263,10 @@ export const promotionalTeam = [
     role: "Social Media Lead",
     bio: "Strategizing the digital reach. Leads the social media campaigns and engagement across all platforms.",
     specialties: ["Instagram Ads", "Audience Growth", "Strategy"],
-    credits: ["MilliStudios Launch", "Digital Campaign — Lead"],
+    credits: ["MilliStudiosOfficial Launch", "Digital Campaign — Lead"],
     initials: "PN",
     accentColor: "#00eaff",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/millistudiosofficial/"
   },
   {
@@ -278,7 +278,7 @@ export const promotionalTeam = [
     credits: ["Campaign Strategy", "Outreach Lead"],
     initials: "OC",
     accentColor: "#b22cff",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/millistudiosofficial/"
   },
   {
@@ -290,7 +290,7 @@ export const promotionalTeam = [
     credits: ["Live Events", "Brand Promotion"],
     initials: "BA",
     accentColor: "#ffcc00",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/millistudiosofficial/"
   },
   {
@@ -302,7 +302,7 @@ export const promotionalTeam = [
     credits: ["Web Growth", "SEO Strategy"],
     initials: "DM",
     accentColor: "#00ff73",
-    edu: "MilliStudios",
+    edu: "MilliStudiosOfficial",
     instagram: "https://www.instagram.com/millistudiosofficial/"
   }
 ];
