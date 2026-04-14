@@ -272,14 +272,15 @@ export default function AdminPage() {
                 <Lock size={18} /> Lock Console
               </button>
             
-            {activeModule === "projects" && (
-              <button 
-                onClick={addProject}
-                className="bg-gradient-cyan text-obsidian px-8 py-4 rounded-xl flex items-center gap-3 font-bold text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-cyan/20"
-              >
-                <Plus size={18} /> New Project
-              </button>
-            )}
+              {activeModule === "projects" && (
+                <button 
+                  onClick={addProject}
+                  className="bg-gradient-cyan text-obsidian px-8 py-4 rounded-xl flex items-center gap-3 font-bold text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-cyan/20"
+                >
+                  <Plus size={18} /> New Project
+                </button>
+              )}
+            </div>
           </header>
 
           <AnimatePresence mode="wait">
